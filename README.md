@@ -104,7 +104,7 @@ MVVM 设计模式在 TableView 中的实践应用
  
 ### 四、 `View` 层: 负责对需要使用的 view 进行封装
  
-```python
+```javascript
 @class CXSignRecordCellViewModel;
 
 @interface CXSignRecordTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
@@ -112,6 +112,7 @@ MVVM 设计模式在 TableView 中的实践应用
  数据源
  */
 @property (nonatomic, strong) NSArray <CXSignRecordCellViewModel*> *dataArray;
+
 /**
  初始化
  */
