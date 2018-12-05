@@ -31,7 +31,7 @@ MVVM 设计模式在 TableView 中的实践应用
 
 ### 二、 `ViewModel` 层:  处理网络请求、数据展示等逻辑,返回值通过 block 回调到 Controller 层
 
-```python
+```javascript
 - (void)requestDataWithPage:(NSInteger)page
                      planId:(NSString *)planId
                     success:(void(^)(NSArray *))success
@@ -92,19 +92,19 @@ MVVM 设计模式在 TableView 中的实践应用
  
 ### 三、 `Model` 层: 负责简单的数据模型创建
  
- ```python
+```javascript
 @interface CXSignRecordModel : NSObject
 @property (nonatomic, copy) NSString *checkinTime;
 @property (nonatomic, copy) NSString *checkoutTime;
 @property (nonatomic, copy) NSString *checkinStatus;
 @property (nonatomic, copy) NSString *checkoutStatus;
 @end
- ```
+```
  
  
 ### 四、 `View` 层: 负责对需要使用的 view 进行封装
  
- ```python
+```python
 @class CXSignRecordCellViewModel;
 
 @interface CXSignRecordTableView : UITableView <UITableViewDelegate, UITableViewDataSource>
@@ -112,14 +112,13 @@ MVVM 设计模式在 TableView 中的实践应用
  数据源
  */
 @property (nonatomic, strong) NSArray <CXSignRecordCellViewModel*> *dataArray;
-
 /**
  初始化
  */
 + (instancetype)loadRecordListViewWithFrame:(CGRect)frame;
 
 @end
- ```
+```
  
 
  
